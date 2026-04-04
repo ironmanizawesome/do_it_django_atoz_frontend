@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block title %}Profile — Hyeon{% endblock %}
+
+{% block content %}
+
+<div class="section">
+    <h2 class="section-title">Profile</h2>
+    <p style="opacity:0.6; margin-bottom:48px; font-style:italic;">
+        제가 궁금합니까? 하하. 이놈의 인기란.
+    </p>
+
+    <div class="profile-grid">
+
+        <!-- 왼쪽: 카테고리 제목 -->
+        <div>
+            <h3 style="font-family:'Playfair Display',serif; font-size:1.4rem;">개인 정보</h3>
+        </div>
+
+        <!-- 오른쪽: 내용 -->
+        <div>
+            <p class="profile-label">전화번호</p>
+            <p class="profile-value">010-1234-5678</p>
+
+            <p class="profile-label">Email</p>
+            <p class="profile-value">ironmanizawesome@gmail.com</p>
+
+            <p class="profile-label">주소</p>
+            <p class="profile-value">대한민국, Korea</p>
+        </div>
+
+    </div>
+
+    <hr class="profile-divider">
+
+    <div class="profile-grid">
+
+        <div>
+            <h3 style="font-family:'Playfair Display',serif; font-size:1.4rem;">신체 정보</h3>
+        </div>
+
+        <div>
+            <p class="profile-label">키</p>
+            <p class="profile-value">180 조금 안됨</p>
+
+            <p class="profile-label">나이</p>
+            <p class="profile-value">내림하면 20살</p>
+
+            <p class="profile-label">몸무게</p>
+            <p class="profile-value">10kg 와 100kg 사이 어딘가</p>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
