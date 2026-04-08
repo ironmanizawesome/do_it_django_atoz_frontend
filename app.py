@@ -13,12 +13,12 @@ def blog_list():
         {"title": "제목2", "content": "내용2"},
         {"title": "제목3", "content": "내용3"},
     ]
-    df = pd.read_csv("data.csv", encoding="cp949", sep="\t")
+    df = pd.read_csv("data.csv", encoding="cp949")
     df.columns = ["title", "content"]
     print(df.head())
     for index, row in df.iterrows():
         posts.append({"title": row["title"], "content": row["content"]})
-    return render_template("blog_list_simple.html",
+    return render_template("blog_list.html",
                            posts=posts)
 
 @app.route("/about")

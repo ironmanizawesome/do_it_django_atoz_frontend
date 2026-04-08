@@ -1,5 +1,4 @@
 {% extends "layout.html" %}
-<<<<<<< Updated upstream
 {# [수정] 기존에는 독립된 완전한 HTML 파일이었음 (<!DOCTYPE html>, <html>, <head>, <body> 포함)
    layout.html을 상속하도록 변경 → navbar, footer, Bootstrap CSS/JS를 공통으로 사용 #}
 {% block content %}
@@ -27,23 +26,6 @@
         <div class="col-3">
             {# [수정] 기존: src="./images/boy_01.jpg" (Flask에서 동작하지 않는 상대 경로)
                url_for('static', filename=...)로 변경 #}
-=======
-{% block content %}
-
-<div class="container">
-    <div class="row my-3">
-        <div class="col-9">
-            <h1>About Me</h1>
-            <h2>서울사람 이성용입니다. </h2>
-            <p>HTML, CSS, JS, Django로 재미있는 웹사이트 만드는 것을 좋아합니다. </p>
-
-            <button onclick="whatTimeIsIt()">현재시간</button>
-            <hr />
-
-            <a href="/">첫 화면으로 가기</a>
-        </div>
-        <div class="col-3">
->>>>>>> Stashed changes
             <img src="{{ url_for('static', filename='images/boy_01.jpg') }}" class="img-fluid w-100">
         </div>
     </div>
@@ -51,7 +33,6 @@
         <div class="col-12">
             <h2>Portfolio</h2>
         </div>
-<<<<<<< Updated upstream
 
         <div class="col-sm col-lg-6 bg-info">
             {# [수정] 기존: src="./images/image_a.jpg" → url_for('static', ...) 로 변경 #}
@@ -73,20 +54,4 @@
             → layout.html 상속으로 자동 포함되므로 중복 작성 불필요 -->
 <script type="text/javascript" src="{{ url_for('static', filename='what_time_is_it.js') }}"></script>
 
-=======
-        <div class="col-sm col-lg-6 bg-info">
-            <img src="{{ url_for('static', filename='images/image_a.jpg') }}" class="img-fluid">
-        </div>
-        <div class="col-sm col-lg-3 bg-secondary">
-            <img src="{{ url_for('static', filename='images/image_b.jpg') }}" class="img-fluid">
-        </div>
-        <div class="col-sm col-lg-3 bg-warning">
-            <img src="{{ url_for('static', filename='images/image_c.jpg') }}" class="img-fluid">
-        </div>
-    </div>
-</div>
-
-<script type="text/javascript" src="{{ url_for('static', filename='what_time_is_it.js') }}"></script>
-
->>>>>>> Stashed changes
 {% endblock %}

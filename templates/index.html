@@ -1,15 +1,12 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<<<<<<< Updated upstream
 {# [제거] 기존에는 {% block content %} 안에 <head>, <body>, <nav> 태그가 있었음
    layout.html을 상속하면 해당 태그들은 layout.html이 담당하므로 자식 템플릿에 있으면 안 됨
    또한 기존의 <nav>는 layout.html의 navbar와 중복 렌더링되는 문제가 있었음 #}
 
 {# [수정] 기존에는 콘텐츠가 <body> 바로 아래에 나열되어 있었음
    layout.html과 일관된 여백/정렬을 위해 container div로 감쌈 #}
-=======
->>>>>>> Stashed changes
 <div class="container my-3">
     <h1>첫번째 크기 헤드라인</h1>
     <h2>두번째 크기 헤드라인</h2>
@@ -30,7 +27,6 @@
     <p>문단은 p로 쓰세요. p는 아마도 Paragraph의 앞 자를 따 온 것이겠죠?</p>
     <a href="https://www.google.com">Go to google</a>
     <hr />
-<<<<<<< Updated upstream
     <img src="{{ url_for('static', filename='images/stay_funky.jpg')}}" width="600px">
 </div>
 
@@ -38,11 +34,6 @@
    Flask에서 정적 파일은 url_for('static', filename=...)으로 참조해야 함
    기존에는 <head> 안에 있었으나, layout.html 상속 구조에서는 <head>를 쓸 수 없으므로
    콘텐츠 블록 하단으로 이동 #}
-=======
-    <img src="{{ url_for('static', filename='images/stay_funky.jpg') }}" width="600px">
-</div>
-
->>>>>>> Stashed changes
 <script type="text/javascript" src="{{ url_for('static', filename='add_two_numbers.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='what_time_is_it.js') }}"></script>
 
