@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+<!-- 오류: posts 데이터를 Jinja2 루프 없이 하드코딩함 -->
+<!-- Flask에서 넘겨준 posts 리스트를 활용하지 않음 -->
+<!-- 수정 예시:
+{% for post in posts %}
+<div>
+    <p>title: {{ post.title }}</p>
+    <p>내용: {{ post.content }}</p>
+</div>
+{% endfor %}
+-->
+{% for post in posts %}
+<div>
+    <p>title: {{ post.title }}</p>
+    <p>내용: {{ post.content }}</p>
+</div>
+{% else %}
+<p>게시물이 없습니다.</p>
+{% endfor %}
+{% endblock %}
